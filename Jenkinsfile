@@ -9,7 +9,9 @@ node {
 
     stage('Build image') {
         /* This builds the actual image */
-        app = docker.build("webapp", "-f DockerFile .")
+	    docker.withRegistry('https://registry-1.docker.io/v2/library/node/manifests/12', 'docker-hub'){
+        	app = docker.build("webapp", "-f DockerFile .")
+	    }
     }
 
     stage('Test image') {
