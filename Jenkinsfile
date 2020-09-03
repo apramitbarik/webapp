@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
         /* This builds the actual image */
-        app = docker.build("webapp", "-f DockerFile")
+        app = docker.build("webapp", "-f DockerFile .")
     }
 
     stage('Test image') {
