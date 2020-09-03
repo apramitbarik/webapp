@@ -10,7 +10,11 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("webapp")
+        /* app = docker.build("webapp")*/
+	    agent any
+	      steps {
+		sh 'docker build -f Dockerfile -t webapp .'
+	      }
     }
 
     stage('Test image') {
