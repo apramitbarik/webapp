@@ -20,6 +20,6 @@ function showPage(response, pathName){
 
 var contentMap = {
 
- '/': '<h1>Welcome to TGS India Testing two</h1>',
+ '/': '<h1>Welcome to TGS India Testing three</h1>',
  '/contact' : '<h1> Contact Page</h1>'
 }
